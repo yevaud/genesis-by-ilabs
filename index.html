@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Bones for Genesis 2.0 by cdukes</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Bones for Genesis 2.0</h1>
+        <h2>A starting point for new Genesis projects. Built for Genesis 2.0+ and WordPress 3.6+.</h2>
+        <a href="https://github.com/cdukes/bones-for-genesis-2-0" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="bones-for-genesis-20" class="anchor" href="#bones-for-genesis-20"><span class="octicon octicon-link"></span></a>Bones for Genesis 2.0</h1>
+
+<p>My fork of <a href="https://github.com/eddiemachado/bones-genesis">eddiemachado's</a> Bones for Genesis. Built for Genesis 2.0+ and WordPress 3.6+.</p>
+
+<p>A starting point for new Genesis projects. This is a starter child theme, not a dependency. Clone it. Fork it. Hack it for your own projects. Build cool things on the web.</p>
+
+<p><em>Issues and pull requests are welcome and will be addressed.</em></p>
+
+<p><em>All functions are prefixed with <code>bfg</code>. Do a find-and-replace to align the these function names to your project's prefix.'</em> </p>
+
+<h2>
+<a name="developer-tools-disabled-by-default" class="anchor" href="#developer-tools-disabled-by-default"><span class="octicon octicon-link"></span></a>Developer Tools (disabled by default)</h2>
+
+<ul>
+<li>Display database query info in your footer</li>
+<li>Put the site in maintenance mode for non-admins</li>
+</ul><h2>
+<a name="genesis-customizations" class="anchor" href="#genesis-customizations"><span class="octicon octicon-link"></span></a>Genesis Customizations</h2>
+
+<ul>
+<li>Enable Genesis 2.0 HTML5 support</li>
+<li>Enable Genesis 2.0 responsive viewport support (disabled by default)</li>
+<li>Unregister default Genesis layouts (template, disabled by default)</li>
+<li>Unregister default Genesis widgets  (template, disabled by default)</li>
+<li>Remove Genesis 'Layout Settings' meta boxes (template, disabled by default)</li>
+</ul><h2>
+<a name="javascript" class="anchor" href="#javascript"><span class="octicon octicon-link"></span></a>JavaScript</h2>
+
+<ul>
+<li>CodeKit-ready</li>
+<li>Submodules for <a href="http://fitvidsjs.com/">FitVids.js</a> &amp; <a href="https://github.com/scottjehl/iOS-Orientationchange-Fix">iOS orientationchange zoom bug</a>
+</li>
+<li>'no-js' <code>&lt;body&gt;</code> class for easy JS detection</li>
+</ul><h2>
+<a name="css" class="anchor" href="#css"><span class="octicon octicon-link"></span></a>CSS</h2>
+
+<ul>
+<li>SASS-ready, CodeKit-ready</li>
+<li>Includes a starter config.rb file for Compass</li>
+<li>Submodule for normalize.scss</li>
+<li>
+<code>%clearfix</code> and <code>%image-replacement</code> SASS <code>@extend</code>'s </li>
+<li>Unstyled, nested selections following Genesis 2.0's style.css as a template</li>
+<li>A tiny of helpful attribute resets and suggestions</li>
+</ul><h2>
+<a name="document-customizations" class="anchor" href="#document-customizations"><span class="octicon octicon-link"></span></a>Document Customizations</h2>
+
+<h3>
+<a name="header" class="anchor" href="#header"><span class="octicon octicon-link"></span></a>Header</h3>
+
+<ul>
+<li>Remove <code>&lt;head&gt;</code> RSD and rel links (updated for Genesis 2.0)</li>
+<li>Enqueue custom stylesheets</li>
+<li>Supports an IE-only stylesheet</li>
+<li>Support the IE6 Universal Stylesheet</li>
+<li>Supports enqueuing Google Fonts (template, disabled by default)</li>
+<li>Enqueue jQuery from Google's CDN</li>
+<li>Enqueue custom scripts</li>
+<li>Specify custom favicon location (template, disabled by default)</li>
+<li>Add a 'no-js' class to <code>&lt;body&gt;</code>
+</li>
+</ul><h3>
+<a name="post" class="anchor" href="#post"><span class="octicon octicon-link"></span></a>Post</h3>
+
+<ul>
+<li>Remove <code>&lt;p&gt;</code> tags from around images</li>
+<li>Remove <code>[gallery]</code> short code injected styles</li>
+<li>Customize the post info and meta text (templates, disabled by default)</li>
+<li>Customize the post navigation prev/next link text (templates, disabled by default)</li>
+</ul><h3>
+<a name="search" class="anchor" href="#search"><span class="octicon octicon-link"></span></a>Search</h3>
+
+<ul>
+<li>Edit search input box and button text (template, disabled by default)</li>
+</ul><h3>
+<a name="sidebar" class="anchor" href="#sidebar"><span class="octicon octicon-link"></span></a>Sidebar</h3>
+
+<ul>
+<li>Allow shortcodes in text widgets (disabled by default)</li>
+<li>Remove 'Recent Comments' widget injected styles</li>
+</ul><h3>
+<a name="footer" class="anchor" href="#footer"><span class="octicon octicon-link"></span></a>Footer</h3>
+
+<ul>
+<li>Customize the footer 'creds' and 'back to top' text (templates, disabled by default)</li>
+</ul><h3>
+<a name="page-templates" class="anchor" href="#page-templates"><span class="octicon octicon-link"></span></a>Page Templates</h3>
+
+<ul>
+<li>Force layout option for template (template, disabled by default)</li>
+</ul><h2>
+<a name="admin-customizations" class="anchor" href="#admin-customizations"><span class="octicon octicon-link"></span></a>Admin Customizations</h2>
+
+<h3>
+<a name="functionality" class="anchor" href="#functionality"><span class="octicon octicon-link"></span></a>Functionality</h3>
+
+<ul>
+<li>Prevent the child theme from being overwritten by a WP.org theme of the same name</li>
+<li>Disable self-pings</li>
+<li>Add new image sizes, and add them to the media size select menu (template, disabled by default)</li>
+</ul><h3>
+<a name="branding" class="anchor" href="#branding"><span class="octicon octicon-link"></span></a>Branding</h3>
+
+<ul>
+<li>Change the /wp-login.php logo URL and title to your blog's homepage and name</li>
+<li>Replace the login logo (template, disabled by default)</li>
+<li>Make WordPress-generated emails appear 'from' your WordPress site name, instead of from 'WordPress'</li>
+<li>Make WordPress-generated emails appear 'from' your WordPress admin email address (disabled by default)</li>
+<li>Remove the 'WP' icon from the admin bar</li>
+<li>Change the admin panel footer text (template, disabled by default)</li>
+</ul><h3>
+<a name="views" class="anchor" href="#views"><span class="octicon octicon-link"></span></a>Views</h3>
+
+<ul>
+<li>Only show the admin bar to users who can at least use Posts</li>
+<li>Disable some or all of the default admin dashboard widgets (template, some disabled by default)</li>
+<li>Disable some or all of the default widgets (template, some disabled by default)</li>
+<li>Change the default hidden meta boxes for pages and posts (template, some hidden by default)</li>
+<li>Add a stylesheet for TinyMCE (disabled by default)</li>
+<li>Show the TinyMCE kitchen sink by default</li>
+<li>Change the available formats in TinyMCE (removes <code>h1</code>, <code>h5</code>, <code>h6</code>, <code>address</code>, and <code>pre</code> by default)</li>
+<li>Add/remove contact methods from user profiles (removes AIM, YahooIM, and Jabber by default)</li>
+<li>Remove dashboard menus (template, disabled by default)</li>
+<li>Prevent the failed login notice from specifying whether the username or the password is incorrect</li>
+<li>Hide the top-right help pull-down button</li>
+</ul><h3>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h3>
+
+<ul>
+<li>Disable some or all of the default Genesis theme option meta boxes (template, some disabled by default)</li>
+</ul><h2>
+<a name="to-dos" class="anchor" href="#to-dos"><span class="octicon octicon-link"></span></a>To Dos</h2>
+
+<ul>
+<li><strong>Add admin-options.php support for setting Genesis default options</strong></li>
+<li>Add admin-options.php Genesis theme options framework</li>
+<li>More standard developer comments &amp; better function formatting</li>
+</ul><h2>
+<a name="further-resources" class="anchor" href="#further-resources"><span class="octicon octicon-link"></span></a>Further Resources</h2>
+
+<ul>
+<li><a href="http://designsbynickthegeek.com/tutorials/genesis-explained-two_">Genesis Explained</a></li>
+</ul><p><strong>Reminder</strong>: Run <code>git submodule foreach git pull origin master</code> on your repo to update all submodules before beginning a new project.</p>
+
+<h2>
+<a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h2>
+
+<h3>
+<a name="v20" class="anchor" href="#v20"><span class="octicon octicon-link"></span></a>v2.0</h3>
+
+<ul>
+<li>Initial release of Genesis 2.0 BFG fork</li>
+</ul>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/cdukes/bones-for-genesis-2-0/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/cdukes/bones-for-genesis-2-0/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/cdukes/bones-for-genesis-2-0"></a> is maintained by <a href="https://github.com/cdukes">cdukes</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-41596634-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
