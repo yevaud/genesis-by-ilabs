@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Bones for Genesis 2.0 : A starting point for new Genesis projects. Built for Genesis 2.0+ and WordPress 3.5+." />
 
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Bones for Genesis 2.0 by cdukes</title>
+    <title>Bones for Genesis 2.0</title>
   </head>
 
   <body>
-    <header>
-      <div class="inner">
-        <h1>Bones for Genesis 2.0</h1>
-        <h2>A starting point for new Genesis projects. Built for Genesis 2.0+ and WordPress 3.6+.</h2>
-        <a href="https://github.com/cdukes/bones-for-genesis-2-0" class="button"><small>View project on</small>GitHub</a>
-      </div>
-    </header>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <h1>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/cdukes/bones-for-genesis-2-0">View on GitHub</a>
+
+          <h1 id="project_title">Bones for Genesis 2.0</h1>
+          <h2 id="project_tagline">A starting point for new Genesis projects. Built for Genesis 2.0+ and WordPress 3.5+.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/cdukes/bones-for-genesis-2-0/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/cdukes/bones-for-genesis-2-0/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
 <a name="bones-for-genesis-20" class="anchor" href="#bones-for-genesis-20"><span class="octicon octicon-link"></span></a>Bones for Genesis 2.0</h1>
 
-<p>My fork of <a href="https://github.com/eddiemachado/bones-genesis">eddiemachado's</a> Bones for Genesis. Built for Genesis 2.0+ and WordPress 3.6+.</p>
+<p>My fork of <a href="https://github.com/eddiemachado/bones-genesis">eddiemachado's</a> Bones for Genesis. Built for Genesis 2.0+ and WordPress 3.5+.</p>
 
 <p>A starting point for new Genesis projects. This is a starter child theme, not a dependency. Clone it. Fork it. Hack it for your own projects. Build cool things on the web.</p>
 
@@ -69,10 +72,11 @@
 <li>SASS-ready, CodeKit-ready</li>
 <li>Includes a starter config.rb file for Compass</li>
 <li>Submodule for normalize.scss</li>
+<li>Includes Genesis 2.0 clearfix</li>
 <li>
 <code>%clearfix</code> and <code>%image-replacement</code> SASS <code>@extend</code>'s </li>
 <li>Unstyled, nested selections following Genesis 2.0's style.css as a template</li>
-<li>A tiny of helpful attribute resets and suggestions</li>
+<li>A skeleton of helpful attribute resets and suggestions</li>
 </ul><h2>
 <a name="document-customizations" class="anchor" href="#document-customizations"><span class="octicon octicon-link"></span></a>Document Customizations</h2>
 
@@ -81,6 +85,7 @@
 
 <ul>
 <li>Remove <code>&lt;head&gt;</code> RSD and rel links (updated for Genesis 2.0)</li>
+<li>Template for serving better favicons to iOS and modern browsers</li>
 <li>Enqueue custom stylesheets</li>
 <li>Supports an IE-only stylesheet</li>
 <li>Support the IE6 Universal Stylesheet</li>
@@ -97,12 +102,13 @@
 <li>Remove <code>&lt;p&gt;</code> tags from around images</li>
 <li>Remove <code>[gallery]</code> short code injected styles</li>
 <li>Customize the post info and meta text (templates, disabled by default)</li>
-<li>Customize the post navigation prev/next link text (templates, disabled by default)</li>
+<li>Customize the post navigation link text (templates, disabled by default)</li>
 </ul><h3>
 <a name="search" class="anchor" href="#search"><span class="octicon octicon-link"></span></a>Search</h3>
 
 <ul>
 <li>Edit search input box and button text (template, disabled by default)</li>
+<li>Redirect straight to the search result when there is only one result (disabled by default)</li>
 </ul><h3>
 <a name="sidebar" class="anchor" href="#sidebar"><span class="octicon octicon-link"></span></a>Sidebar</h3>
 
@@ -113,7 +119,7 @@
 <a name="footer" class="anchor" href="#footer"><span class="octicon octicon-link"></span></a>Footer</h3>
 
 <ul>
-<li>Customize the footer 'creds' and 'back to top' text (templates, disabled by default)</li>
+<li>Customize the footer 'creds' text (template, disabled by default)</li>
 </ul><h3>
 <a name="page-templates" class="anchor" href="#page-templates"><span class="octicon octicon-link"></span></a>Page Templates</h3>
 
@@ -128,7 +134,8 @@
 <ul>
 <li>Prevent the child theme from being overwritten by a WP.org theme of the same name</li>
 <li>Disable self-pings</li>
-<li>Add new image sizes, and add them to the media size select menu (template, disabled by default)</li>
+<li>Add new image sizes, and add them to the media size select menu (templates, disabled by default)</li>
+<li>Force the Link Manager to be shown/hidden (disabled by default)</li>
 </ul><h3>
 <a name="branding" class="anchor" href="#branding"><span class="octicon octicon-link"></span></a>Branding</h3>
 
@@ -165,6 +172,7 @@
 <ul>
 <li>Add admin-options.php support for setting Genesis default options</li>
 <li>Add admin-options.php Genesis theme options framework</li>
+<li>Better SASS organization into partials, modules, etc.</li>
 <li>
 <em>(Ongoing)</em> More standard developer comments &amp; better function formatting</li>
 </ul><h2>
@@ -178,6 +186,16 @@
 <a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h2>
 
 <h3>
+<a name="205-july-16-2013" class="anchor" href="#205-july-16-2013"><span class="octicon octicon-link"></span></a>2.0.5 (July 16, 2013)</h3>
+
+<ul>
+<li>For <code>comment-reply</code> script loading, changed <code>is_singular()</code> to <code>is_single() || is_page() || is_attachment()</code> in <code>bfg_load_stylesheets()</code> for better granularity</li>
+<li>Added function in <code>search.php</code> to redirect directly to the result on searches with only one result (disabled by default)</li>
+<li>Title links should typically inherit their <code>.entry-title</code> color, not show the default link color</li>
+<li>Added filters in <code>post.php</code> to customize the older/newer post navigation text (disabled by default)</li>
+<li>
+<code>Readme.md</code> updates</li>
+</ul><h3>
 <a name="204-july-10-2013" class="anchor" href="#204-july-10-2013"><span class="octicon octicon-link"></span></a>2.0.4 (July 10, 2013)</h3>
 
 <ul>
@@ -236,26 +254,18 @@
 <ul>
 <li>Initial release of Genesis 2.0 BFG fork</li>
 </ul>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/cdukes/bones-for-genesis-2-0/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/cdukes/bones-for-genesis-2-0/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/cdukes/bones-for-genesis-2-0"></a> is maintained by <a href="https://github.com/cdukes">cdukes</a>.</p>
-
-          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
     </div>
 
-            <script type="text/javascript">
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Bones for Genesis 2.0 maintained by <a href="https://github.com/cdukes">cdukes</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -265,6 +275,7 @@
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
+
 
   </body>
 </html>
