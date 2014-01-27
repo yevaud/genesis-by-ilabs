@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Bones for Genesis 2.0 : A starting point for new Genesis projects. Built for Genesis 2.0+ and WordPress 3.5+." />
+    <meta name="description" content="Bones for Genesis 2.0 : A starting point for new Genesis projects. Built for Genesis 2.0.2+ and WordPress 3.8+." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/cdukes/bones-for-genesis-2-0">View on GitHub</a>
 
           <h1 id="project_title">Bones for Genesis 2.0</h1>
-          <h2 id="project_tagline">A starting point for new Genesis projects. Built for Genesis 2.0+ and WordPress 3.5+.</h2>
+          <h2 id="project_tagline">A starting point for new Genesis projects. Built for Genesis 2.0.2+ and WordPress 3.8+.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/cdukes/bones-for-genesis-2-0/zipball/master">Download this project as a .zip file</a>
@@ -34,13 +34,24 @@
         <h1>
 <a name="bones-for-genesis-20" class="anchor" href="#bones-for-genesis-20"><span class="octicon octicon-link"></span></a>Bones for Genesis 2.0</h1>
 
-<p>My fork of <a href="https://github.com/eddiemachado/bones-genesis">eddiemachado's</a> Bones for Genesis. Built for Genesis 2.0.1+ and WordPress 3.8+.</p>
+<p>My fork of <a href="https://github.com/eddiemachado/bones-genesis">eddiemachado's</a> Bones for Genesis. Built for Genesis 2.0.2+ and WordPress 3.8+.</p>
 
 <p>A starting point for new Genesis projects. This is a starter child theme, not a dependency. Clone it. Fork it. Hack it for your own projects. Build cool things on the web.</p>
 
 <p><em>Issues and pull requests are welcome and will be addressed.</em></p>
 
-<p><em>All functions are prefixed with <code>bfg</code>. Do a find-and-replace to align the these function names to your project's prefix.'</em> </p>
+<p><strong>Note: As of v2.1.0, BFG uses <a href="http://bower.io/">Bower</a> instead of Git submodules. Apologies for the extra dependencies, but I believe this is a step toward fewer compile errors and less painful package management.</strong></p>
+
+<h2>
+<a name="to-get-started" class="anchor" href="#to-get-started"><span class="octicon octicon-link"></span></a>To Get Started</h2>
+
+<pre><code>git clone https://github.com/cdukes/bones-for-genesis-2-0.git genesis-bfg
+cd genesis-bfg
+bower update
+compass compile # To make sure everything is installed and working
+</code></pre>
+
+<p><em>All functions are prefixed with <code>bfg</code>. Do a find-and-replace to align the these function names to your project's prefix.'</em></p>
 
 <h2>
 <a name="developer-tools-disabled-by-default" class="anchor" href="#developer-tools-disabled-by-default"><span class="octicon octicon-link"></span></a>Developer Tools (disabled by default)</h2>
@@ -62,8 +73,6 @@
 
 <ul>
 <li>CodeKit-ready</li>
-<li>Submodules for <a href="http://fitvidsjs.com/">FitVids.js</a> &amp; <a href="https://github.com/scottjehl/iOS-Orientationchange-Fix">iOS orientationchange zoom bug</a>
-</li>
 <li>'no-js' <code>&lt;body&gt;</code> class for easy JS detection</li>
 </ul><h2>
 <a name="css" class="anchor" href="#css"><span class="octicon octicon-link"></span></a>CSS</h2>
@@ -74,7 +83,7 @@
 <li>Submodule for normalize.scss</li>
 <li>Includes Genesis 2.0 clearfix</li>
 <li>
-<code>%clearfix</code> and <code>%image-replacement</code> SASS <code>@extend</code>'s </li>
+<code>%clearfix</code> and <code>%image-replacement</code> SASS <code>@extend</code>'s</li>
 <li>Unstyled, nested selections following Genesis 2.0's style.css as a template</li>
 <li>A skeleton of helpful attribute resets and suggestions</li>
 </ul><h2>
@@ -173,15 +182,26 @@
 <li>Add admin-options.php support for setting Genesis default options</li>
 <li>Add admin-options.php Genesis theme options framework</li>
 <li>Better SASS organization into partials, modules, etc.</li>
-<li>Conditional jQuery 2.0 enqueueing </li>
+<li>Conditional jQuery 2.0 enqueueing</li>
 <li>
 <em>(Ongoing)</em> More standard developer comments &amp; better function formatting</li>
-</ul><p><strong>Reminder</strong>: Run <code>git submodule foreach git pull origin master</code> on your repo to update all submodules before beginning a new project.</p>
-
-<h2>
+</ul><h2>
 <a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h2>
 
 <h3>
+<a name="210-january-27-2014" class="anchor" href="#210-january-27-2014"><span class="octicon octicon-link"></span></a>2.1.0 (January 27, 2014)</h3>
+
+<ul>
+<li>Migrated submodules to Bower</li>
+<li>Added jQuery Placeholder plugin</li>
+<li>Fixed jQuery version reference in <code>includes/header.php</code>
+</li>
+</ul><h3>
+<a name="2022-january-10-2014" class="anchor" href="#2022-january-10-2014"><span class="octicon octicon-link"></span></a>2.0.22 (January 10, 2014)</h3>
+
+<ul>
+<li>Removed <code>bfg_prevent_child_theme_update</code>, since Genesis 2.0.2 now does this.</li>
+</ul><h3>
 <a name="2021-january-8-2014" class="anchor" href="#2021-january-8-2014"><span class="octicon octicon-link"></span></a>2.0.21 (January 8, 2014)</h3>
 
 <ul>
@@ -384,7 +404,7 @@
 </li>
 <li>Initialize Genesis's <code>init.php</code> file directly now, instead of using the <code>genesis_setup</code> hook</li>
 <li>Added child theme definitions (<code>CHILD_THEME_NAME</code>, <code>CHILD_THEME_URL</code>, <code>CHILD_THEME_VERSION</code>)</li>
-<li>Commented out <code>text-shadow: none;</code> from <code>::selection</code>, since this prevents all selection styling unless <code>background-color</code> is also specified </li>
+<li>Commented out <code>text-shadow: none;</code> from <code>::selection</code>, since this prevents all selection styling unless <code>background-color</code> is also specified</li>
 <li>Removed <code>_grid.scss</code> responsive styling, since it was causing awkward breakpoint issues on non-responsive sites.</li>
 <li>Commented out <code>body { text-rendering:  optimizeLegibility; }</code>, since this can cause display issues on poorly generated fonts.</li>
 <li>Removed default floats in <code>_layout.scss</code>
