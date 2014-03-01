@@ -40,15 +40,17 @@
 
 <p><em>Issues and pull requests are welcome and will be addressed.</em></p>
 
-<p><strong>Note: As of v2.1.0, BFG uses <a href="http://bower.io/">Bower</a> instead of Git submodules. Apologies for the extra dependencies, but I believe this is a step toward fewer compile errors and less painful package management.</strong></p>
+<p><strong>Note: As of v2.2.0, BFG uses <a href="http://gruntjs.com/">Grunt</a> instead of Codekit and <a href="http://bower.io/">Bower</a> instead of Git submodules. Apologies for the extra dependencies, but I believe this is a step toward fewer compile errors and less painful project management.</strong></p>
 
 <h2>
 <a name="to-get-started" class="anchor" href="#to-get-started"><span class="octicon octicon-link"></span></a>To Get Started</h2>
 
+<p>You'll need <a href="http://nodejs.org/">Node.js</a>, <a href="http://gruntjs.com/">Grunt</a>, and <a href="http://bower.io/">Bower</a>.</p>
+
 <pre><code>git clone https://github.com/cdukes/bones-for-genesis-2-0.git genesis-bfg
 cd genesis-bfg
-bower update
-compass compile # To make sure everything is installed and working
+npm update --save-dev &amp;&amp; bower update --save
+grunt
 </code></pre>
 
 <p><em>All functions are prefixed with <code>bfg</code>. Do a find-and-replace to align the these function names to your project's prefix.'</em></p>
@@ -59,6 +61,18 @@ compass compile # To make sure everything is installed and working
 <ul>
 <li>Display database query info in your footer</li>
 <li>Put the site in maintenance mode for non-admins</li>
+<li>Grunt:
+
+<ul>
+<li>Automatic JS concatenation </li>
+<li>Automatic JS minification (Uglify)</li>
+<li>Automatic image optimization (JPEG, PNG, GIF) </li>
+<li>SASS &amp; Compass support</li>
+<li>
+<a href="https://github.com/ai/autoprefixer">Autoprefixer</a> and CSS minification support</li>
+<li>Watches for file changes, and notifies on error</li>
+</ul>
+</li>
 </ul><h2>
 <a name="genesis-customizations" class="anchor" href="#genesis-customizations"><span class="octicon octicon-link"></span></a>Genesis Customizations</h2>
 
@@ -68,18 +82,17 @@ compass compile # To make sure everything is installed and working
 <li>Unregister default Genesis layouts (template, disabled by default)</li>
 <li>Unregister default Genesis widgets  (template, disabled by default)</li>
 <li>Remove Genesis 'Layout Settings' meta boxes (template, disabled by default)</li>
+<li>Various other hooks to tweak Genesis's setup, such as footer widget count, menu names, post format support, etc.</li>
 </ul><h2>
 <a name="javascript" class="anchor" href="#javascript"><span class="octicon octicon-link"></span></a>JavaScript</h2>
 
 <ul>
-<li>CodeKit-ready</li>
 <li>'no-js' <code>&lt;body&gt;</code> class for easy JS detection</li>
+<li>Preloaded libraries: <a href="http://fitvidsjs.com/">FitVids.js</a>, <a href="https://github.com/scottjehl/iOS-Orientationchange-Fix">iOS-Orientationchange-Fix</a>, <a href="https://github.com/joeldbirch/superfish">Superfish</a>, <a href="http://benhowdle.im/svgeezy/">SVGeezy</a>, and <a href="https://github.com/mathiasbynens/jquery-placeholder">jQuery placeholder</a>.</li>
 </ul><h2>
 <a name="css" class="anchor" href="#css"><span class="octicon octicon-link"></span></a>CSS</h2>
 
 <ul>
-<li>SASS-ready, CodeKit-ready</li>
-<li>Includes a starter config.rb file for Compass</li>
 <li>Submodule for normalize.scss</li>
 <li>Includes Genesis 2.0 clearfix</li>
 <li>
@@ -94,12 +107,13 @@ compass compile # To make sure everything is installed and working
 
 <ul>
 <li>Remove <code>&lt;head&gt;</code> RSD and rel links (updated for Genesis 2.0)</li>
+<li>X-UA-Compatible  tag</li>
 <li>Template for serving better favicons to iOS and modern browsers</li>
 <li>Enqueue custom stylesheets</li>
 <li>Supports an IE-only stylesheet</li>
 <li>Support the IE6 Universal Stylesheet</li>
 <li>Supports enqueuing Google Fonts (template, disabled by default)</li>
-<li>Enqueue jQuery from Google's CDN</li>
+<li>Enqueue jQuery from Google's CDN, with fallback to a local copy. </li>
 <li>Enqueue custom scripts</li>
 <li>Specify custom favicon location (template, disabled by default)</li>
 <li>Add a 'no-js' class to <code>&lt;body&gt;</code>
@@ -112,12 +126,24 @@ compass compile # To make sure everything is installed and working
 <li>Remove <code>[gallery]</code> short code injected styles</li>
 <li>Customize the post info and meta text (templates, disabled by default)</li>
 <li>Customize the post navigation link text (templates, disabled by default)</li>
+<li>Remove the (edit) link</li>
+</ul><h3>
+<a name="archives" class="anchor" href="#archives"><span class="octicon octicon-link"></span></a>Archives</h3>
+
+<ul>
+<li>Show the archive title and description, even if the Genesis fields for these aren't set (disabled by default)</li>
+</ul><h3>
+<a name="comments" class="anchor" href="#comments"><span class="octicon octicon-link"></span></a>Comments</h3>
+
+<ul>
+<li>Templates to remove comments, comment forms, pings, and/or all of these (disabled by default)</li>
 </ul><h3>
 <a name="search" class="anchor" href="#search"><span class="octicon octicon-link"></span></a>Search</h3>
 
 <ul>
 <li>Edit search input box and button text (template, disabled by default)</li>
 <li>Redirect straight to the search result when there is only one result (disabled by default)</li>
+<li>Limit searching to only posts (disabled by default)</li>
 </ul><h3>
 <a name="sidebar" class="anchor" href="#sidebar"><span class="octicon octicon-link"></span></a>Sidebar</h3>
 
@@ -129,6 +155,8 @@ compass compile # To make sure everything is installed and working
 
 <ul>
 <li>Customize the footer 'creds' text (template, disabled by default)</li>
+<li>Disable pointer events on scroll (template, disabled by default)</li>
+<li>IE8 icon font fix (template, disabled by default)</li>
 </ul><h3>
 <a name="page-templates" class="anchor" href="#page-templates"><span class="octicon octicon-link"></span></a>Page Templates</h3>
 
@@ -189,6 +217,20 @@ compass compile # To make sure everything is installed and working
 <a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h2>
 
 <h3>
+<a name="220-march-01-2014" class="anchor" href="#220-march-01-2014"><span class="octicon octicon-link"></span></a>2.2.0 (March 01, 2014)</h3>
+
+<ul>
+<li>Grunt integration</li>
+<li>Remove Compass <a href="https://github.com/includes" class="user-mention">@includes</a> and sass-flex-mixin, instead use Autoprefixer</li>
+</ul><h3>
+<a name="212-february-24-2014" class="anchor" href="#212-february-24-2014"><span class="octicon octicon-link"></span></a>2.1.2 (February 24, 2014)</h3>
+
+<ul>
+<li>Update jQuery to 1.11.0</li>
+<li>Document to use <code>--save</code> option when updating Bower</li>
+<li>Require PHP files instead of including them, as in StudioPress's <a href="http://www.studiopress.com/free-themes/sample">example Genesis child theme</a>
+</li>
+</ul><h3>
 <a name="211-february-15-2014" class="anchor" href="#211-february-15-2014"><span class="octicon octicon-link"></span></a>2.1.1 (February 15, 2014)</h3>
 
 <ul>
