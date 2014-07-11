@@ -4,7 +4,7 @@
   <head>
     <meta charset='utf-8' />
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
-    <meta name="description" content="Bones for Genesis 2.0 : A starting point for new Genesis projects. Built for Genesis 2.1.0+ and WordPress 3.9+." />
+    <meta name="description" content="Bones for Genesis 2.0 : A starting point for new Genesis projects. Built for Genesis 2.1+ and WordPress 3.9+." />
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
@@ -19,7 +19,7 @@
           <a id="forkme_banner" href="https://github.com/cdukes/bones-for-genesis-2-0">View on GitHub</a>
 
           <h1 id="project_title">Bones for Genesis 2.0</h1>
-          <h2 id="project_tagline">A starting point for new Genesis projects. Built for Genesis 2.1.0+ and WordPress 3.9+.</h2>
+          <h2 id="project_tagline">A starting point for new Genesis projects. Built for Genesis 2.1+ and WordPress 3.9+.</h2>
 
             <section id="downloads">
               <a class="zip_download_link" href="https://github.com/cdukes/bones-for-genesis-2-0/zipball/master">Download this project as a .zip file</a>
@@ -217,6 +217,17 @@ grunt
 <a name="changelog" class="anchor" href="#changelog"><span class="octicon octicon-link"></span></a>Changelog</h2>
 
 <h3>
+<a name="2214-july-11-2014" class="anchor" href="#2214-july-11-2014"><span class="octicon octicon-link"></span></a>2.2.14 (July 11, 2014)</h3>
+
+<ul>
+<li>Set all package versions in <code>package.json</code> to <code>*</code>, so that NPM will download the latest versions, then update the file with that info, on <code>npm update --save-dev</code>
+</li>
+<li>Set Bower to always pull the latest versions of its dependencies </li>
+<li>Removed <code>grunt-svgmin</code>, since <code>grunt-contrib-imagemin</code> now supports SVGs</li>
+<li>Added <code>grunt-newer</code>, so that only changed images will be optimized when Grunt is watching for changes</li>
+<li>No longer create a <code>style.prefixed.css</code> file. Replace <code>style.css</code> with the prefixed version</li>
+<li>Added <code>grunt-colorguard</code>, which outputs warnings about similar CSS colors</li>
+</ul><h3>
 <a name="2213-july-1-2014" class="anchor" href="#2213-july-1-2014"><span class="octicon octicon-link"></span></a>2.2.13 (July 1, 2014)</h3>
 
 <ul>
